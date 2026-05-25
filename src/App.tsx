@@ -1,8 +1,9 @@
 import './App.css'
+import Header from './components/common/Header/Header'
 
 function App() {
   return (<div className="App">
-    <h1>Praxe E-shop</h1>
+          <Header />
     </div>
   )
 }

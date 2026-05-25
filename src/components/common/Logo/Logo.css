@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+.logo{
+    font-family: geist;
+    font-weight: 900;
+    font-style: bold;
+    text-decoration: none;
+    display: flex;
+    letter-spacing: -2px;
+}
+
+.logo-separator{
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0 5px;
+  color: #c96736;
+}

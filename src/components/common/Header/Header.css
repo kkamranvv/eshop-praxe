@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    color: #333;
+    padding: 20px;
+    align-items: left;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    height: 50px;
+    align-items: center;
+    text-align: left;
+}
+
+.search-wrapper{
+    display: flex;
+    gap: 10px;
+    align-items: right;
+    margin-left: auto;
+}
+
+.search-wrapper input{
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.shopping-cart{
+    display: flex;
+    background-color: #ffff;
+    color: black;
+    gap: 5px;
+}
+
+.search-icon{
+    font-size: 18px;
+}
