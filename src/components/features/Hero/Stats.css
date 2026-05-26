@@ -1,0 +1,21 @@
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 2px solid gray;
+  max-width: 580px;
+}
+
+.stats-value {
+  font-size: 28px;
+  font-family: "Geist", system-ui, sans-serif;
+  font-weight: 700;
+}
+
+.stats-label {
+  display: block;
+}
+
+.stats-item {
+  margin-top: 10px;
+}
