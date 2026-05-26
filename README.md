@@ -25,6 +25,6 @@ The goal is to learn modern React development practices: component architecture,
 
 ## Links
 
-- **Figma — User Flow** → [User Flow eshop-praxe](https://www.figma.com/design/Cr8QA7e70lSfvti1tNHsc7/User-Flow-eshop-praxe?node-id=0-1&t=GV0CFFq08O4OXwk9-1)
+- **Figma — User Flow** → [User Flow eshop-praxe](https://www.figma.com/design/Cr8QA7e70lSfvti1tNHsc7/User-Flow-eshop-praxe?node-id=0-1&t=V5Yi3MSmvxVxRNo6-1)
 - **Notion — Components Documentation** → [https://www.notion.so/praxeshop-36b2a20769d580329028ea7f19b1d876?source=copy_link]
 
