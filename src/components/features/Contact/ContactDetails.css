@@ -1,0 +1,20 @@
+.contact-details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-item{
+    font-family: "Geist Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.contact-value{
+    display: block;
+    font-family: "Geist", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+    font-size: 15px;
+    color: #161514;
+}
