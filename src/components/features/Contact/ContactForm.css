@@ -64,8 +64,20 @@
     background-color: #f3f1ea;
 }
 
+.form-input.invalid{
+    border-color: #d93025;
+    background-color: #fff3f2;
+}
+
 .form-input:focus{
     outline: none;
     border-color: #333333;
     background-color: #e0e0e0;
+}
+
+.error-text{
+    color: #d93025;
+    font-size: 0.9rem;
+    margin-top: -6px;
+    margin-bottom: 8px;
 }
