@@ -1,0 +1,40 @@
+.showcase-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  min-width: 160px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.showcase-item--active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.showcase-item-tag {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c96736;
+  margin-bottom: 6px;
+}
+
+.showcase-item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #161511;
+  margin-bottom: 4px;
+}
+
+.showcase-item-price {
+  font-size: 14px;
+  color: #555;
+}
