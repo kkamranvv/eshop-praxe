@@ -1,6 +1,14 @@
 .hero {
+  display: flex;
+  align-items: center;
+  gap: 48px;
   padding-top: 48px;
   padding-bottom: 64px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
 }
 
 .hero-edition {
