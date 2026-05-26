@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import "./Navigation.css";
 
@@ -9,22 +9,18 @@ const navItems = [
 ];
 
 const Navigation = () => {
-  const [activeId, setActiveId] = useState<number | null>(null);
+  const { pathname } = useLocation();
 
   return (
     <nav className="nav-menu">
       {navItems.map((item) => (
-        <a
+        <Link
           key={item.id}
-          href={item.href}
-          className={`nav-link${activeId === item.id ? " nav-link--active" : ""}`}
-          onClick={(e) => {
-            e.preventDefault();
-            setActiveId(item.id);
-          }}
+          to={item.href}
+          className={`nav-link${pathname === item.href ? " nav-link--active" : ""}`}
         >
           {item.label}
-        </a>
+        </Link>
       ))}
     </nav>
   );

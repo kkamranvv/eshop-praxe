@@ -1,5 +1,5 @@
 .showcase-item {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.532);
   border-radius: 12px;
   padding: 14px 18px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
@@ -15,6 +15,13 @@
 .showcase-item--active {
   opacity: 1;
   pointer-events: auto;
+}
+
+.showcase-item-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
 }
 
 .showcase-item-tag {
