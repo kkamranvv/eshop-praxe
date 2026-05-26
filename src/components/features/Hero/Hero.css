@@ -1,0 +1,101 @@
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-edition {
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #c96736;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero-title-first {
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  color: #161511;
+  line-height: 1.05;
+  letter-spacing: -0.2px;
+}
+
+.hero-title-second {
+  font-family: "Instrument Serif", serif;
+  font-size: 72px;
+  font-weight: 400;
+  color: #8d4825;
+  line-height: 1.05;
+  font-style: italic;
+  letter-spacing: -1px;
+  margin-bottom: 28px;
+  margin-top: 2px;
+}
+
+.hero-description {
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: #161511;
+  color: #fff;
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1.5px solid #161511;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #2e2b22;
+  border-color: #2e2b22;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: #161511;
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1.5px solid #161511;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 210, 31, 0.06);
+}
