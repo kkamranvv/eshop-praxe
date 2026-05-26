@@ -1,0 +1,44 @@
+.featured {
+  padding: 48px 0 64px;
+}
+
+.featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.featured-tag {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c96736;
+  margin-bottom: 8px;
+}
+
+.featured-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #161511;
+  letter-spacing: -0.5px;
+}
+
+.featured-all {
+  font-size: 14px;
+  font-weight: 500;
+  color: #161511;
+  white-space: nowrap;
+  padding-bottom: 4px;
+}
+
+.featured-all:hover {
+  color: #c96736;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}

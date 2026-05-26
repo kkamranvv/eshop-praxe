@@ -7,7 +7,7 @@
 .header {
   position: relative;
   color: #333;
-  padding: 20px;
+  padding: 20px 0;
   align-items: left;
   font-family: Arial, sans-serif;
   display: flex;
