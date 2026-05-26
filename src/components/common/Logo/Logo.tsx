@@ -3,10 +3,8 @@ import './Logo.css'
 const Logo = () => {
   return (
     <div className="logo">
-      <h1>praxe</h1>
-      <div className="logo-separator">
-        <h1>shop</h1>
-      </div>
+      <span className="logo-praxe">praxe</span>
+      <span className="logo-shop">shop</span>
     </div>
   )
 }
