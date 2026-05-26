@@ -1,8 +1,12 @@
 
-import './App.css'
-import Header from './components/common/Header/Header'
+
+
 import Contact from './pages/Contact/Contact'
-import Hero from './components/features/Hero/Hero';
+import "./App.css";
+import Header from "./components/common/Header/Header";
+import FeaturedProducts from "./components/features/FeaturedProducts/FeaturedProducts";
+import Hero from "./components/features/Hero/Hero";
+
 
 function App() {
   return (
@@ -10,6 +14,10 @@ function App() {
       <Header />
       <Contact />
       <Hero />
+
+
+      <FeaturedProducts />
+
     </div>
   );
 };
