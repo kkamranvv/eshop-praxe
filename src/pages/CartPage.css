@@ -1,0 +1,40 @@
+.cart-page {
+  padding-bottom: 80px;
+}
+
+.cart-page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+.cart-page-empty {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding-bottom: 8px;
+}
+
+.cart-page-empty:hover {
+  color: #e00;
+}
+
+.cart-page-body {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.cart-page-items {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-page-empty-msg {
+  font-size: 15px;
+  color: #888;
+  padding: 60px 0;
+}
