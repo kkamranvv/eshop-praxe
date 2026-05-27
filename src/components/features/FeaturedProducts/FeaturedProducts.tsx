@@ -1,5 +1,6 @@
 import "./FeaturedProdutcts.css";
 import "../../common/ProductCard/ProductCard.css";
+import { useAddToCart } from "../../../utils/useAddToCart";
 
 const items = [
   {
@@ -52,6 +53,8 @@ const items = [
 ];
 
 const FeaturedProducts = () => {
+  const { added, handleAdd } = useAddToCart();
+
   return (
     <section className="featured">
       <div className="featured-header">
@@ -73,8 +76,12 @@ const FeaturedProducts = () => {
                 <span className="product-card-price">
                   ${item.price.toFixed(2)}
                 </span>
-                <button type="button" className="product-card-btn">
-                  Add
+                <button
+                  type="button"
+                  onClick={() => handleAdd(item.id)}
+                  className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
+                >
+                  {added.has(item.id) ? "Added" : "Add"}
                 </button>
               </div>
             </div>

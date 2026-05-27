@@ -1,3 +1,4 @@
+import { useAddToCart } from "../../../utils/useAddToCart";
 import "./ProductCard.css";
 
 interface Product {
@@ -13,6 +14,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ items }: ProductCardProps) => {
+  const { added, handleAdd } = useAddToCart();
+
   return (
     <div className="product-card-list">
       {items.map((item) => (
@@ -25,8 +28,12 @@ const ProductCard = ({ items }: ProductCardProps) => {
             <h3 className="product-card-title">{item.title}</h3>
             <div className="product-card-footer">
               <span className="product-card-price">${item.price}</span>
-              <button type="button" className="product-card-btn">
-                Add
+              <button
+                type="button"
+                onClick={() => handleAdd(item.id)}
+                className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
+              >
+                {added.has(item.id) ? "Added" : "Add"}
               </button>
             </div>
           </div>
