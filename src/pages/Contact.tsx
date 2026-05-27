@@ -3,6 +3,8 @@ import ContactForm from "../components/features/Contact/ContactForm";
 import ContactInfo from "../components/features/Contact/ContactInfo";
 import ThankYou from "./ThankYou/ThankYou";
 import Header from "../components/common/Header/Header";
+import Footer from "../components/common/Footer/Footer";
+
 
 const Contact = () => {
   const [submittedName, setSubmittedName] = useState<string | null>(null);
@@ -18,6 +20,7 @@ const Contact = () => {
       <Header />
       <ContactInfo />
       <ContactForm onSuccess={setSubmittedName} />
+      <Footer />
     </div>
   );
 };
