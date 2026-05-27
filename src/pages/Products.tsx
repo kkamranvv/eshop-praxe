@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 import { fetchProducts } from "../utils/api";
 import Footer from "../components/common/Footer/Footer";
 
-
 const Products = () => {
   const [products, setProducts] = useState([]);
 
@@ -30,7 +29,6 @@ const Products = () => {
         </div>
       </div>
       <ProductCard items={products} />
-      Product page
       <Footer />
     </div>
   );
