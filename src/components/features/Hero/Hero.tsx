@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <p className="hero-edition">SPRING 2026 · EDIT NO. 12</p>
+        <p className="hero-edition">SUMMER 2026 · EDIT NO. 12</p>
         <h1 className="hero-title-first">Everyday objects,</h1>
         <h1 className="hero-title-second">thoughtfully sourced.</h1>
         <p className="hero-description">
