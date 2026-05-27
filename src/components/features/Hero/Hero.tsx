@@ -4,6 +4,8 @@ import "./Hero.css";
 import Stats from "./Stats";
 import ProductShowcase from "../ProductShowcase/ProductShowcase";
 
+import { Link } from "react-router";
+
 const Hero = () => {
   return (
     <section className="hero">
@@ -17,12 +19,16 @@ const Hero = () => {
           honestly, shipped from Prague.
         </p>
         <div className="hero-actions">
-          <button type="button" className="btn-primary">
-            Shop all products →
-          </button>
-          <button type="button" className="btn-secondary">
-            Get in touch
-          </button>
+          <Link to={"/products"}>
+            <button type="button" className="btn-primary">
+              Shop all products →
+            </button>{" "}
+          </Link>
+          <Link to={"/contact"}>
+            <button type="button" className="btn-secondary">
+              Get in touch
+            </button>
+          </Link>
         </div>
         <Stats />
       </div>
