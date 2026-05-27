@@ -5,7 +5,6 @@ import ThankYou from "./ThankYou/ThankYou";
 import Header from "../components/common/Header/Header";
 import Footer from "../components/common/Footer/Footer";
 
-
 const Contact = () => {
   const [submittedName, setSubmittedName] = useState<string | null>(null);
 

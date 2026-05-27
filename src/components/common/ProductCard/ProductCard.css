@@ -86,6 +86,12 @@
   background-color: #2e2b22;
 }
 
+.product-card-btn--added {
+  background-color: #3a7d44;
+  border-color: #3a7d44;
+  pointer-events: none;
+}
+
 .product-card-count {
   display: inline-flex;
   align-items: center;

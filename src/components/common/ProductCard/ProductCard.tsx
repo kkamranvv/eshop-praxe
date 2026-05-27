@@ -1,22 +1,20 @@
+import { useAddToCart } from "../../../utils/useAddToCart";
 import "./ProductCard.css";
 
-const ProductCard = () => {
-  const items = [
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-    },
-    {
-      id: 2,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-    },
-  ];
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  image: string;
+}
+
+interface ProductCardProps {
+  items: Product[];
+}
+
+const ProductCard = ({ items }: ProductCardProps) => {
+  const { added, handleAdd } = useAddToCart();
 
   return (
     <div className="product-card-list">
@@ -30,8 +28,12 @@ const ProductCard = () => {
             <h3 className="product-card-title">{item.title}</h3>
             <div className="product-card-footer">
               <span className="product-card-price">${item.price}</span>
-              <button type="button" className="product-card-btn">
-                Add
+              <button
+                type="button"
+                onClick={() => handleAdd(item.id)}
+                className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
+              >
+                {added.has(item.id) ? "Added" : "Add"}
               </button>
             </div>
           </div>

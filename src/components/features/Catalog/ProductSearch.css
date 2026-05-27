@@ -1,0 +1,16 @@
+.product-search {
+  padding: 8px 14px;
+  border: 1px solid #d8d3c8;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #161511;
+  background: #fff;
+  width: 180px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  cursor: text;
+}
+
+.product-search:focus {
+  border-color: #161511;
+}
