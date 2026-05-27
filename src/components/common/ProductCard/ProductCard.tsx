@@ -1,23 +1,18 @@
 import "./ProductCard.css";
 
-const ProductCard = () => {
-  const items = [
-    {
-      id: 1,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-    },
-    {
-      id: 2,
-      title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-      price: 109.95,
-      category: "men's clothing",
-      image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
-    },
-  ];
+interface Product {
+  id: number;
+  title: string;
+  price: number;
+  category: string;
+  image: string;
+}
 
+interface ProductCardProps {
+  items: Product[];
+}
+
+const ProductCard = ({ items }: ProductCardProps) => {
   return (
     <div className="product-card-list">
       {items.map((item) => (

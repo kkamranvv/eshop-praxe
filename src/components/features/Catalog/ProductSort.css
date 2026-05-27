@@ -1,0 +1,26 @@
+.product-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-sort-label {
+  font-size: 14px;
+  color: #999;
+}
+
+.product-sort-select {
+  padding: 8px 12px;
+  border: 1px solid #d8d3c8;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #161511;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.product-sort-select:focus {
+  border-color: #161511;
+}
