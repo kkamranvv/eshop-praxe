@@ -9,10 +9,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/products", element: <Products /> },
   { path: "/contact", element: <Contact /> },
-  {
-    path: "/cart",
-    element: <CartPage />,
-  },
+  { path: "/cart", element: <CartPage /> },
 ]);
 
 const AppRoutes = () => (

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { useAddToCart } from "../../../utils/useAddToCart";
 import "./ProductCard.css";
 
@@ -14,12 +15,17 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ items }: ProductCardProps) => {
+  const navigate = useNavigate();
   const { added, handleAdd } = useAddToCart();
 
   return (
     <div className="product-card-list">
       {items.map((item) => (
-        <div key={item.id} className="product-card">
+        <div
+          key={item.id}
+          className="product-card"
+          onClick={() => navigate(`/products/${item.id}`)}
+        >
           <div className="product-card-image">
             <img src={item.image} alt={item.title} />
           </div>
@@ -30,7 +36,7 @@ const ProductCard = ({ items }: ProductCardProps) => {
               <span className="product-card-price">${item.price}</span>
               <button
                 type="button"
-                onClick={() => handleAdd(item.id)}
+                onClick={(e) => { e.stopPropagation(); handleAdd(item); }}
                 className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
               >
                 {added.has(item.id) ? "Added" : "Add"}

@@ -78,7 +78,7 @@ const FeaturedProducts = () => {
                 </span>
                 <button
                   type="button"
-                  onClick={() => handleAdd(item.id)}
+                  onClick={() => handleAdd(item)}
                   className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
                 >
                   {added.has(item.id) ? "Added" : "Add"}
