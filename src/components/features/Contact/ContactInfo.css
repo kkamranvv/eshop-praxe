@@ -1,10 +1,11 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
-  padding: 20px;
+  padding: 20px 0;
   font-family: "Geist", sans-serif;
   color: #8f8a82;
+  max-width: 400px;
+  flex-shrink: 0;
 }
 
 .contact-header h3 {
