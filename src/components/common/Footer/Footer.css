@@ -19,9 +19,11 @@ footer {
     flex-direction: row;
     align-items: center;
     padding: 20px 0;
+
     font-family: Arial, sans-serif;
     justify-content: space-between;
     width: 100%;
+    min-height: 50px;
 }
 
 .navigation {

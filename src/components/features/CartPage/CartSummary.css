@@ -84,3 +84,9 @@
 .cart-summary-continue:hover {
   color: #333;
 }
+
+.cart-summary-checkout--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
