@@ -1,25 +1,25 @@
-import { useState } from "react";
 import "./CategoryFilter.css";
 
 const categories = ["All", "Men's Clothing", "Jewelery", "Electronics", "Women's Clothing"];
 
-const CategoryFilter = () => {
-  const [active, setActive] = useState("All");
+interface Props {
+  value: string;
+  onChange: (cat: string) => void;
+}
 
-  return (
-    <div className="category-filter">
-      {categories.map((cat) => (
-        <button
-          key={cat}
-          type="button"
-          className={`category-btn${active === cat ? " category-btn--active" : ""}`}
-          onClick={() => setActive(cat)}
-        >
-          {cat}
-        </button>
-      ))}
-    </div>
-  );
-};
+const CategoryFilter = ({ value, onChange }: Props) => (
+  <div className="category-filter">
+    {categories.map((cat) => (
+      <button
+        key={cat}
+        type="button"
+        className={`category-btn${value === cat ? " category-btn--active" : ""}`}
+        onClick={() => onChange(cat)}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+);
 
 export default CategoryFilter;
