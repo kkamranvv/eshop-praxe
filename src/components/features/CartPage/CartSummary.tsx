@@ -3,9 +3,10 @@ import "./CartSummary.css";
 
 interface CartSummaryProps {
   subtotal: number;
+  count: number;
 }
 
-const CartSummary = ({ subtotal }: CartSummaryProps) => {
+const CartSummary = ({ subtotal, count }: CartSummaryProps) => {
   return (
     <div className="cart-summary">
       <p className="cart-summary-heading">ORDER SUMMARY</p>
@@ -22,9 +23,15 @@ const CartSummary = ({ subtotal }: CartSummaryProps) => {
         <span>Total</span>
         <span>${subtotal.toFixed(2)}</span>
       </div>
-      <button type="button" className="cart-summary-checkout">
+      
+      <Link 
+        to={count > 0 ? "/checkout" : "#"}
+        state={{ subtotal, count }}
+        className={`cart-summary-checkout ${count === 0 ? "cart-summary-checkout--disabled" : ""}`}
+        onClick={(e) => count === 0 && e.preventDefault()}>
         Checkout →
-      </button>
+      </Link>
+      
       <Link to="/products" className="cart-summary-continue">
         ← Continue shopping
       </Link>
