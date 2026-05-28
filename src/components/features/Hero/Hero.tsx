@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Hero.css";
 import Stats from "./Stats";
 import ProductShowcase from "../ProductShowcase/ProductShowcase";

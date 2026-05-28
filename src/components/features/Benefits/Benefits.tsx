@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Benefits.css";
 import Benefit from "./Benefit";
 

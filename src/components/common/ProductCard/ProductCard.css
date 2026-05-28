@@ -1,9 +1,14 @@
 .product-card-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  cursor: pointer;
   margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+  .product-card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .product-card {
