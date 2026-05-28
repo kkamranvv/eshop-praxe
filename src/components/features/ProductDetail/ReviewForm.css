@@ -1,0 +1,109 @@
+.review-form {
+    border: 1px solid #e1ddd0;
+    border-radius: 12px;
+    padding: 28px;
+    margin-bottom: 32px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-form-row {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.review-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.review-form-label {
+    font-family: "Geist Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #938f85;
+}
+
+.review-form-input {
+    padding: 10px 14px;
+    border: 1px solid #e1ddd0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5f3ee;
+    outline: none;
+    color: #1a1a1a;
+}
+
+.review-form-input:focus {
+    border-color: #aaa;
+}
+
+.review-form-textarea {
+    padding: 10px 14px;
+    border: 1px solid #e1ddd0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f5f3ee;
+    outline: none;
+    color: #1a1a1a;
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.review-form-textarea:focus {
+    border-color: #aaa;
+}
+
+.review-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.review-form-cancel {
+    padding: 10px 20px;
+    border: 1px solid #e1ddd0;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1a1a1a;
+}
+
+.review-form-cancel:hover {
+    background-color: #f5f3ee;
+}
+
+.review-form-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.review-form-submit:hover {
+    background-color: #333;
+}
+
+.review-form-input--error,
+.review-form-textarea--error {
+    border-color: #c0392b;
+    background-color: #fff5f5;
+}
+
+.review-form-error {
+    font-size: 12px;
+    color: #c0392b;
+    font-family: "Geist Mono", monospace;
+}
