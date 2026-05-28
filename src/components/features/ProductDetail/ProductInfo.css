@@ -1,0 +1,62 @@
+.pdp-category {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.pdp-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #161511;
+  line-height: 1.35;
+  margin: 12px 0 16px;
+}
+
+.pdp-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+.pdp-star {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.pdp-star--filled {
+  color: #f5a623;
+}
+
+.pdp-rating-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #161511;
+  margin-left: 6px;
+}
+
+.pdp-rating-count {
+  font-size: 13px;
+  color: #aaa;
+  margin-left: 2px;
+}
+
+.pdp-price {
+  font-size: 30px;
+  font-weight: 700;
+  color: #161511;
+  margin-bottom: 20px;
+}
+
+.pdp-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

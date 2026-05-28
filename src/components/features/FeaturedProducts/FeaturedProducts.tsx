@@ -1,6 +1,7 @@
 import "./FeaturedProdutcts.css";
 import "../../common/ProductCard/ProductCard.css";
 import { useAddToCart } from "../../../utils/useAddToCart";
+import { useNavigate } from "react-router-dom";
 
 const items = [
   {
@@ -53,6 +54,7 @@ const items = [
 ];
 
 const FeaturedProducts = () => {
+  const navigate = useNavigate();
   const { added, handleAdd } = useAddToCart();
 
   return (
@@ -65,7 +67,7 @@ const FeaturedProducts = () => {
       </div>
       <div className="featured-grid">
         {items.map((item) => (
-          <div key={item.id} className="product-card">
+          <div key={item.id} className="product-card" onClick={() => navigate(`/products/${item.id}`)}>
             <div className="product-card-image">
               <img src={item.image} alt={item.title} />
             </div>
@@ -78,7 +80,7 @@ const FeaturedProducts = () => {
                 </span>
                 <button
                   type="button"
-                  onClick={() => handleAdd(item)}
+                  onClick={(e) => { e.stopPropagation(); handleAdd(item); }}
                   className={`product-card-btn${added.has(item.id) ? " product-card-btn--added" : ""}`}
                 >
                   {added.has(item.id) ? "Added" : "Add"}

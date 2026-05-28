@@ -4,6 +4,7 @@ import ContactInfo from "../components/features/Contact/ContactInfo";
 import ThankYou from "./ThankYou/ThankYou";
 import Header from "../components/common/Header/Header";
 import Footer from "../components/common/Footer/Footer";
+import "./Contact.css";
 
 const Contact = () => {
   const [submittedName, setSubmittedName] = useState<string | null>(null);
@@ -17,8 +18,10 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <Header />
-      <ContactInfo />
-      <ContactForm onSuccess={setSubmittedName} />
+      <div className="contact-layout">
+        <ContactInfo />
+        <ContactForm onSuccess={setSubmittedName} />
+      </div>
       <Footer />
     </div>
   );

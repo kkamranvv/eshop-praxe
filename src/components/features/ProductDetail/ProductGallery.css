@@ -1,0 +1,16 @@
+.pdp-image-wrap {
+  flex: 0 0 460px;
+  background: #f0ece4;
+  border-radius: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 460px;
+}
+
+.pdp-image {
+  max-width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+}

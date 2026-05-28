@@ -1,0 +1,15 @@
+.pdp-breadcrumb {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.pdp-breadcrumb-link {
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.15s;
+}
+
+.pdp-breadcrumb-link:hover {
+  color: #161511;
+}

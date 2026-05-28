@@ -4,8 +4,13 @@ import Hero from "../components/features/Hero/Hero";
 import FeaturedProducts from "../components/features/FeaturedProducts/FeaturedProducts";
 import Footer from "../components/common/Footer/Footer";
 import Benefits from "../components/features/Benefits/Benefits";
+import { useEffect } from "react";
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div>
       <Header />

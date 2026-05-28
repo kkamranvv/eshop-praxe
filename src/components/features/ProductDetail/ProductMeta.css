@@ -1,0 +1,26 @@
+.pdp-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 48px;
+  border-top: 1px solid #eee;
+  padding-top: 28px;
+}
+
+.pdp-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pdp-meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.pdp-meta-value {
+  font-size: 14px;
+  color: #161511;
+}
