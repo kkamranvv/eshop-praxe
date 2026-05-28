@@ -1,0 +1,19 @@
+.btn {
+  padding: 12px 24px;
+  background-color: #161511;
+  color: #fff;
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1.5px solid #161511;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2e2b22;
+  border-color: #2e2b22;
+}

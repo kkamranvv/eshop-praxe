@@ -6,3 +6,9 @@
   border-bottom: 1px solid #d8d3c8;
   margin: 48px 0;
 }
+
+@media (max-width: 768px) {
+  .benefits-section {
+    display: block;
+  }
+}

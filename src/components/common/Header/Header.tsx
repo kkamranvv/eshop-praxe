@@ -1,15 +1,25 @@
+import { useState } from "react";
 import "./Header.css";
 import Logo from "../Logo/Logo";
 import Navigation from "./Navigation/Navigation";
 import SearchBar from "./SearchBar/SearchBar";
 import Cart from "./Cart/Cart";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <Logo />
       <div className="menu">
-        <Navigation />
+        <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <CloseIcon /> : <MenuIcon />}
+        </div>
+        <div className={menuOpen ? "nav-open" : "nav-closed"}>
+          <Navigation />
+        </div>
 
         {/* <div className="button-wrapper home">
             <div className="button-hover">
@@ -28,9 +38,9 @@ const Header = () => {
         </div> */}
         <div className="search-wrapper">
           <SearchBar />
-          <div className="shopping-cart">
-            <Cart />
-          </div>
+        </div>
+        <div className="shopping-cart">
+          <Cart />
         </div>
       </div>
     </header>

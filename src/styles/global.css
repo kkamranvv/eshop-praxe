@@ -55,6 +55,12 @@ body {
   padding: 10px 170px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: 10px 16px;
+  }
+}
+
 h1,
 h2,
 h3,

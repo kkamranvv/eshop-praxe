@@ -5,6 +5,7 @@ import Stats from "./Stats";
 import ProductShowcase from "../ProductShowcase/ProductShowcase";
 
 import { Link } from "react-router";
+import Button from "../../common/Button/Button";
 
 const Hero = () => {
   return (
@@ -20,9 +21,7 @@ const Hero = () => {
         </p>
         <div className="hero-actions">
           <Link to={"/products"}>
-            <button type="button" className="btn-primary">
-              Shop all products →
-            </button>{" "}
+            <Button text="Show all products" />
           </Link>
           <Link to={"/contact"}>
             <button type="button" className="btn-secondary">
