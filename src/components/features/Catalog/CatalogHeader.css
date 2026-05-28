@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 48px 0 32px;
+  padding: 24px 0 32px;
 }
 
 .catalog-tag {
