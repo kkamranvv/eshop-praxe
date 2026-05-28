@@ -9,6 +9,7 @@ import ProductActions from "../components/features/ProductDetail/ProductActions"
 import ProductMeta from "../components/features/ProductDetail/ProductMeta";
 import { fetchProduct } from "../utils/api";
 import "./ProductDetail.css";
+import ReviewItem from "../components/features/ProductDetail/ReviewItem";
 
 interface Product {
   id: number;
@@ -55,6 +56,7 @@ const ProductDetail = () => {
             />
             <ProductActions product={product} />
             <ProductMeta id={product.id} category={product.category} />
+            <ReviewItem />
           </div>
         </div>
       </div>
