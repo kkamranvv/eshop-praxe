@@ -1,86 +1,90 @@
 .success-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    padding: 215px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
 }
 
 .success-circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #d4f5d4;
-    border-radius: 50%;
-    padding: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d4f5d4;
+  border-radius: 50%;
+  padding: 1px;
 }
 
 .success-icon {
-    color: #1e7a1e !important;
-    font-size: 100px !important;
+  color: #1e7a1e !important;
+  font-size: 100px !important;
 }
 
 .order h3 {
-    color: #cf794e;
-    font-family: "Geist Mono", monospace;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding-top: 30px;
+  color: #cf794e;
+  font-family: "Geist Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-top: 30px;
 }
 
 .page-title {
-    font-family: "Geist", sans-serif;
-    font-weight: 500;
-    font-size: 43px;
-    letter-spacing: -0.025em;
-    line-height: 1.05;
-    text-align: center;
+  font-family: "Geist", sans-serif;
+  font-weight: 500;
+  font-size: 43px;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  text-align: center;
 }
 
 .page-lead {
-    color: #75736d;
-    margin: 0 auto 32px;
-    max-width: 440px;
-    padding-top: 20px;
-    text-align: center;
+  color: #75736d;
+  margin: 0 auto 32px;
+  max-width: 440px;
+  padding-top: 20px;
+  text-align: center;
 }
 
 .order-meta {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 0 32px;
-    padding: 20px 0;
-    border-top: 1px solid #f0d785;
-    border-bottom: 1px solid #f0d785;
-    font-family: "Geist", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 0 32px;
+  padding: 20px 0;
+  border-top: 1px solid #f0d785;
+  border-bottom: 1px solid #f0d785;
+  font-family:
+    "Geist",
+    system-ui,
+    -apple-system,
+    "Helvetica Neue",
+    sans-serif;
 }
 
 .order-meta > div {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding: 0 24px;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 24px;
+  align-items: center;
+  text-align: center;
 }
 
-
 .order-meta dt {
-    font-family: "Geist Mono", monospace;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #938f85;
+  font-family: "Geist Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #938f85;
 }
 
 .order-meta dd {
-    font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
 }
