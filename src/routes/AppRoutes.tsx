@@ -4,10 +4,12 @@ import Products from "../pages/Products";
 import Contact from "../pages/Contact";
 import { CartProvider } from "../context/CartContext";
 import CartPage from "../pages/CartPage";
+import ProductDetail from "../pages/ProductDetail";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/products", element: <Products /> },
+  { path: "/products/:id", element: <ProductDetail /> },
   { path: "/contact", element: <Contact /> },
   { path: "/cart", element: <CartPage /> },
 ]);
