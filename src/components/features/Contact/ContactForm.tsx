@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import "./ContactForm.css";
+import Button from "../../common/Button/Button";
 
 type ContactFormProps = {
   onSuccess: (name: string) => void;
@@ -116,9 +117,7 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
           </span>
         )}
 
-        <button className="submit-button" type="submit">
-          Send Message
-        </button>
+        <Button text="Send Message" />
       </form>
     </div>
   );

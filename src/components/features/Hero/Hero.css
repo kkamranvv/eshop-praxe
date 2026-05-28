@@ -99,3 +99,22 @@
 .btn-secondary:hover {
   background-color: rgba(255, 210, 31, 0.06);
 }
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    gap: 32px;
+  }
+
+  .hero-title-first,
+  .hero-title-second {
+    font-size: 44px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}

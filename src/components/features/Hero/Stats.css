@@ -19,3 +19,14 @@
 .stats-item {
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .stats {
+    max-width: 100%;
+    gap: 8px;
+  }
+
+  .stats-value {
+    font-size: 22px;
+  }
+}
