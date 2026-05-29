@@ -63,10 +63,10 @@ const CartSummary = ({ subtotal, count, items }: CartSummaryProps) => {
                 className={`cart-summary-checkout ${count === 0 ? "cart-summary-checkout--disabled" : ""}`}
                 onClick={(e) => count === 0 && e.preventDefault()}
             >
-                Place order →
+                Checkout →
             </Link>
             <Link to="/products" className="cart-summary-continue">
-                ← Back to cart
+                ← Continue shopping
             </Link>
         </div>
     );
