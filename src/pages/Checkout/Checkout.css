@@ -88,3 +88,101 @@
   color: #1a1a1a;
   margin: 0;
 }
+
+.checkout-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-body {
+    flex: 1;
+    display: flex;
+    gap: 60px;
+    padding: 48px 120px;
+    align-items: flex-start;
+}
+
+.checkout-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-right {
+    width: 340px;
+    flex-shrink: 0;
+}
+
+.checkout-tag {
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #cf794e;
+}
+
+.checkout-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin: 8px 0 12px;
+    color: #1a1a1a;
+}
+
+.checkout-lead {
+    font-size: 14px;
+    color: #75736d;
+    margin-bottom: 36px;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkout-label {
+    font-size: 13px;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.checkout-input {
+    padding: 12px 14px;
+    border: 1px solid #e1ddd0;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    outline: none;
+    color: #1a1a1a;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.checkout-input:focus {
+    border-color: #aaa;
+}
+
+.checkout-input--error {
+    border-color: #c0392b;
+    background-color: #fff5f5;
+}
+
+.checkout-error {
+    font-size: 12px;
+    color: #c0392b;
+    font-family: "Geist Mono", monospace;
+}
+
+.checkout-test-note {
+    font-size: 12px;
+    color: #938f85;
+    font-family: "Geist Mono", monospace;
+}
