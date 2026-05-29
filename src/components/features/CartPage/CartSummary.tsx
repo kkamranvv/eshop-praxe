@@ -28,7 +28,8 @@ const CartSummary = ({ subtotal, count }: CartSummaryProps) => {
         to={count > 0 ? "/checkout" : "#"}
         state={{ subtotal, count }}
         className={`cart-summary-checkout ${count === 0 ? "cart-summary-checkout--disabled" : ""}`}
-        onClick={(e) => count === 0 && e.preventDefault()}>
+        onClick={(e) => count === 0 && e.preventDefault()}
+        onClick={() => onRemove(item.id)}>
         Checkout →
       </Link>
       
