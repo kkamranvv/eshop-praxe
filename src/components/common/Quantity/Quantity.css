@@ -1,0 +1,36 @@
+.qty {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.qty button {
+  background: #fff;
+  border: none;
+  width: 42px;
+  height: 46px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #161511;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.qty button:hover {
+  background: #f5f5f5;
+}
+
+.qty span {
+  width: 42px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #161511;
+  background-color: #fff;
+}

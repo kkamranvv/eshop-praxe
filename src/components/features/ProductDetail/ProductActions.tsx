@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useCart } from "../../../context/CartContext";
 import type { CartProduct } from "../../../context/CartContext";
 import "./ProductActions.css";
+import Quantity from "../../common/Quantity/Quantity";
 
 interface Props {
   product: CartProduct;
@@ -20,11 +21,7 @@ const ProductActions = ({ product }: Props) => {
 
   return (
     <div className="pdp-actions">
-      <div className="pdp-qty">
-        <button type="button" onClick={() => setQty((q) => Math.max(1, q - 1))}>−</button>
-        <span>{qty}</span>
-        <button type="button" onClick={() => setQty((q) => q + 1)}>+</button>
-      </div>
+      <Quantity value={qty} onChange={setQty} />
       <button
         type="button"
         className={`pdp-btn-cart${added ? " pdp-btn-cart--added" : ""}`}
