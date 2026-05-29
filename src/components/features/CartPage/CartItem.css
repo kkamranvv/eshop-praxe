@@ -47,7 +47,7 @@
   margin: 0;
 }
 
-.cart-item-qty {
+.cart-item .qty {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -57,7 +57,7 @@
   flex-shrink: 0;
 }
 
-.cart-item-qty button {
+.cart-item .qty button {
   background: none;
   border: none;
   font-size: 16px;
@@ -69,11 +69,11 @@
   text-align: center;
 }
 
-.cart-item-qty button:hover {
+.cart-item .qty button:hover {
   color: #000;
 }
 
-.cart-item-qty span {
+.cart-item .qty span {
   font-size: 14px;
   font-weight: 500;
   min-width: 20px;

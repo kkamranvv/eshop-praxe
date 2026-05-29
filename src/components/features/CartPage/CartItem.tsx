@@ -1,5 +1,6 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import type { CartProduct } from "../../../context/CartContext";
+import Quantity from "../../common/Quantity/Quantity";
 import "./CartItem.css";
 
 interface CartItemProps {
@@ -20,15 +21,16 @@ const CartItem = ({ item, onRemove, onQuantityChange }: CartItemProps) => {
         <p className="cart-item-title">{item.title}</p>
       </div>
 
-      <div className="cart-item-qty">
-        <button type="button" onClick={() => onQuantityChange(item.id, -1)}>−</button>
-        <span>{item.quantity}</span>
-        <button type="button" onClick={() => onQuantityChange(item.id, 1)}>+</button>
-      </div>
+      <Quantity
+        value={item.quantity}
+        onChange={(newQty) => onQuantityChange(item.id, newQty - item.quantity)}
+      />
 
       <div className="cart-item-pricing">
         <span className="cart-item-unit">${item.price.toFixed(2)} each</span>
-        <span className="cart-item-subtotal">${(item.price * item.quantity).toFixed(2)}</span>
+        <span className="cart-item-subtotal">
+          ${(item.price * item.quantity).toFixed(2)}
+        </span>
       </div>
 
       <button
