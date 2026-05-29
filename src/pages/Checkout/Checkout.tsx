@@ -2,6 +2,7 @@ import Footer from "../../components/common/Footer/Footer";
 import Header from "../../components/common/Header/Header";
 import PageHeader from "../../components/common/PageHeader/PageHeader";
 import Button from "../../components/common/Button/Button";
+import OrderSummary from "../../components/common/OrderSummary/OrderSummary";
 import "./Checkout.css";
 import CheckIcon from '@mui/icons-material/Check';
 import { useLocation, useNavigate } from "react-router-dom";
@@ -163,39 +164,12 @@ const Checkout = () => {
                 </div>
 
                 <div className="checkout-right">
-                    <div className="cart-summary">
-                        <p className="cart-summary-heading">ORDER SUMMARY</p>
-                        <div className="cart-summary-items">
-                            {items.map((item: any) => (
-                                <div key={item.id} className="cart-summary-product">
-                                    <img src={item.image} alt={item.title} className="cart-summary-product-img" />
-                                    <div className="cart-summary-product-info">
-                                        <span className="cart-summary-product-title">{item.title}</span>
-                                        <span className="cart-summary-product-qty">Qty {item.quantity}</span>
-                                    </div>
-                                    <span className="cart-summary-product-price">${(item.price * item.quantity).toFixed(2)}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="cart-summary-divider" />
-                        <div className="cart-summary-row">
-                            <span>Subtotal</span>
-                            <span>${subtotal.toFixed(2)}</span>
-                        </div>
-                        <div className="cart-summary-row">
-                            <span>Shipping</span>
-                            <span>{subtotal > 0 ? "$6.50" : "Free"}</span>
-                        </div>
-                        <div className="cart-summary-divider" />
-                        <div className="cart-summary-row cart-summary-total">
-                            <span>Total</span>
-                            <span>${(subtotal + (subtotal > 0 ? 6.50 : 0)).toFixed(2)}</span>
-                        </div>
+                    <OrderSummary items={items} subtotal={subtotal}>
                         <Button text="Place order →" onClick={handlePlace} />
-                        <button type="button" className="cart-summary-continue" onClick={() => navigate("/cart")}>
+                        <button type="button" className="checkout-back" onClick={() => navigate("/cart")}>
                             ← Back to cart
                         </button>
-                    </div>
+                    </OrderSummary>
                 </div>
             </div>
             <Footer />
