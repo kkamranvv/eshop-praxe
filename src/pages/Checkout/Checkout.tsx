@@ -1,5 +1,7 @@
 import Footer from "../../components/common/Footer/Footer";
 import Header from "../../components/common/Header/Header";
+import PageHeader from "../../components/common/PageHeader/PageHeader";
+import Button from "../../components/common/Button/Button";
 import "./Checkout.css";
 import CheckIcon from '@mui/icons-material/Check';
 import { useLocation, useNavigate } from "react-router-dom";
@@ -39,16 +41,22 @@ const Checkout = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
-        setForm(prev => ({ ...prev, [name]: value }));
+        if (name === "card") {
+            const digits = value.replace(/\D/g, "").slice(0, 16);
+            const formatted = digits.replace(/(.{4})/g, "$1 ").trim();
+            setForm(prev => ({ ...prev, card: formatted }));
+        } else {
+            setForm(prev => ({ ...prev, [name]: value }));
+        }
         setErrors(prev => ({ ...prev, [name]: false }));
     };
 
     const handlePlace = () => {
         const newErrors = {
             name: form.name.trim() === "",
-            email: form.email.trim() === "",
+            email: !form.email.includes("@"),
             address: form.address.trim() === "",
-            card: form.card.trim() === "",
+            card: form.card.replace(/\s/g, "").length !== 16,
         };
         setErrors(newErrors);
         if (Object.values(newErrors).some(Boolean)) return;
@@ -96,18 +104,20 @@ const Checkout = () => {
     return (
         <div className="checkout-page-wrapper">
             <Header />
+            <PageHeader
+                tag="CHECKOUT"
+                title="Almost there."
+                description="A few details and you're done. Nothing is actually charged — this is a demo."
+            />
             <div className="checkout-body">
                 <div className="checkout-left">
-                    <span className="checkout-tag">CHECKOUT</span>
-                    <h1 className="checkout-title">Almost there.</h1>
-                    <p className="checkout-lead">A few details and you're done. Nothing is actually charged — this is a demo.</p>
-
                     <div className="checkout-form">
                         <div className="checkout-field">
                             <label className="checkout-label">Full name</label>
                             <input
                                 className={`checkout-input ${errors.name ? "checkout-input--error" : ""}`}
                                 name="name"
+                                placeholder="John Doe"
                                 value={form.name}
                                 onChange={handleChange}
                             />
@@ -119,10 +129,11 @@ const Checkout = () => {
                             <input
                                 className={`checkout-input ${errors.email ? "checkout-input--error" : ""}`}
                                 name="email"
+                                placeholder="john@example.com"
                                 value={form.email}
                                 onChange={handleChange}
                             />
-                            {errors.email && <span className="checkout-error">Please enter your email</span>}
+                            {errors.email && <span className="checkout-error">Please enter a valid email</span>}
                         </div>
 
                         <div className="checkout-field">
@@ -146,8 +157,7 @@ const Checkout = () => {
                                 value={form.card}
                                 onChange={handleChange}
                             />
-                            {errors.card && <span className="checkout-error">Please enter your card number</span>}
-                            <span className="checkout-test-note">Test only — no real charge.</span>
+                            {errors.card && <span className="checkout-error">Card must be 16 digits</span>}
                         </div>
                     </div>
                 </div>
@@ -170,21 +180,19 @@ const Checkout = () => {
                         <div className="cart-summary-divider" />
                         <div className="cart-summary-row">
                             <span>Subtotal</span>
-                            <span>${(subtotal - 6.50).toFixed(2)}</span>
+                            <span>${subtotal.toFixed(2)}</span>
                         </div>
                         <div className="cart-summary-row">
                             <span>Shipping</span>
-                            <span>$6.50</span>
+                            <span>{subtotal > 0 ? "$6.50" : "Free"}</span>
                         </div>
                         <div className="cart-summary-divider" />
                         <div className="cart-summary-row cart-summary-total">
                             <span>Total</span>
-                            <span>${subtotal.toFixed(2)}</span>
+                            <span>${(subtotal + (subtotal > 0 ? 6.50 : 0)).toFixed(2)}</span>
                         </div>
-                        <button className="cart-summary-checkout" onClick={handlePlace}>
-                            Place order →
-                        </button>
-                        <button className="cart-summary-continue" onClick={() => navigate("/cart")}>
+                        <Button text="Place order →" onClick={handlePlace} />
+                        <button type="button" className="cart-summary-continue" onClick={() => navigate("/cart")}>
                             ← Back to cart
                         </button>
                     </div>

@@ -96,10 +96,9 @@
 }
 
 .checkout-body {
-    flex: 1;
     display: flex;
     gap: 60px;
-    padding: 48px 120px;
+    padding-bottom: 80px;
     align-items: flex-start;
 }
 
