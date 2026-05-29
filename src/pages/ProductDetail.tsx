@@ -10,6 +10,7 @@ import ProductMeta from "../components/features/ProductDetail/ProductMeta";
 import { fetchProduct } from "../utils/api";
 import "./ProductDetail.css";
 import ReviewItem from "../components/features/ProductDetail/ReviewItem";
+import NotFound from "../components/common/NotFound/NotFound";
 
 interface Product {
   id: number;
@@ -24,16 +25,44 @@ interface Product {
 const ProductDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [product, setProduct] = useState<Product | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
-    if (id) fetchProduct(id).then((res) => setProduct(res.data));
+    if (id) {
+      setLoading(true);
+      setError(false);
+      fetchProduct(id)
+        .then((res) => setProduct(res.data))
+        .catch(() => setError(true))
+        .finally(() => setLoading(false));
+    }
   }, [id]);
 
-  if (!product) {
+  if (loading) {
     return (
       <div>
         <Header />
         <div className="pdp-loading">Loading...</div>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (error || !product) {
+    return (
+      <div>
+        <Header />
+        <NotFound
+          title="Product not found"
+          description={
+            error
+              ? "Something went wrong while loading this product."
+              : "The product you're looking for doesn't exist or has been removed."
+          }
+          linkTo="/products"
+          linkLabel="Back to Products"
+        />
         <Footer />
       </div>
     );

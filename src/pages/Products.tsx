@@ -20,12 +20,17 @@ interface Product {
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   const [category, setCategory] = useState("All");
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("featured");
 
   useEffect(() => {
-    fetchProducts().then((res) => setProducts(res.data));
+    fetchProducts()
+      .then((res) => setProducts(res.data))
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
   }, []);
 
   let filtered = [...products];
@@ -45,6 +50,30 @@ const Products = () => {
   else if (sort === "name")
     filtered.sort((a, b) => a.title.localeCompare(b.title));
 
+  const renderContent = () => {
+    if (loading) {
+      return <div className="catalog-status">Loading products...</div>;
+    }
+    if (error) {
+      return (
+        <div className="catalog-status catalog-status--error">
+          <p>Failed to load products. Please check your connection and try again.</p>
+          <button type="button" className="catalog-retry-btn" onClick={() => window.location.reload()}>
+            Try again
+          </button>
+        </div>
+      );
+    }
+    if (filtered.length === 0) {
+      return (
+        <div className="catalog-status">
+          No products found{search ? ` for "${search}"` : ""}.
+        </div>
+      );
+    }
+    return <ProductCard items={filtered} />;
+  };
+
   return (
     <div>
       <Header />
@@ -56,7 +85,7 @@ const Products = () => {
           <ProductSort value={sort} onChange={setSort} />
         </div>
       </div>
-      <ProductCard items={filtered} />
+      {renderContent()}
       <Footer />
     </div>
   );

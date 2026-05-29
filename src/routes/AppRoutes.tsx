@@ -6,6 +6,7 @@ import { CartProvider } from "../context/CartContext";
 import CartPage from "../pages/CartPage";
 import Checkout from "../pages/Checkout/Checkout";
 import ProductDetail from "../pages/ProductDetail";
+import NotFoundPage from "../pages/NotFoundPage";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
   { path: "/products/:id", element: <ProductDetail /> },
   { path: "/contact", element: <Contact /> },
   { path: "/cart", element: <CartPage /> },
-  { path: "/checkout", element: <Checkout />}
+  { path: "/checkout", element: <Checkout /> },
+  { path: "*", element: <NotFoundPage /> },
 ]);
 
 const AppRoutes = () => (

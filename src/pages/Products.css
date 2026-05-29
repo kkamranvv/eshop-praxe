@@ -10,3 +10,35 @@
   align-items: center;
   gap: 12px;
 }
+
+.catalog-status {
+  text-align: center;
+  padding: 80px 40px;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.catalog-status--error {
+  color: #b91c1c;
+}
+
+.catalog-status--error p {
+  margin-bottom: 20px;
+}
+
+.catalog-retry-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.catalog-retry-btn:hover {
+  background: #333;
+}
